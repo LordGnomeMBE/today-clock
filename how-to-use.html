@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Date & Time Clocks by LordGnomeMBE</title>
+<style>
+body {
+font-family: arial;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column1 {
+  float: left;
+  width: 60%;
+  padding: 10px;
+}
+.column2 {
+  float: left;
+  width: 40%;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.clock-frame-default {
+  width: 200px;
+  height: 120px;
+}
+
+.clock-frame {
+  width: 200px;
+  height: 120px;
+  border: 3px solid black;
+  border-radius: 20px;
+}
+
+.clock-frame-background {
+  width: 200px;
+  height: 120px;
+  border: 3px solid black;
+  border-radius: 20px;
+  background: red;
+}
+
+.clock-frame-background-image {
+  width: 200px;
+  height: 120px;
+  border: 3px solid black;
+  border-radius: 20px;
+  background-image: url("https://wosu.org/wp-content/uploads/2015/10/Ball-of-Sun.jpg");
+  background-size: cover;
+}
+.clock-frame-background-image-white {
+  width: 200px;
+  height: 120px;
+  border: 3px solid black;
+  border-radius: 20px;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/d7/House_of_Commons_Chamber_1.png");
+  background-size: cover;
+}
+
+.clock-frame-background-image-gif {
+  width: 200px;
+  height: 120px;
+  border: 3px solid black;
+  border-radius: 20px;
+  background-image: url("https://media0.giphy.com/media/fqfPOiwKagbluB8Ors/giphy.gif");
+  background-size: cover;
+}
+
+</style>
+</head>
+<body>
+<h1 style="text-align: center">Date & Time Clocks</h1>
+<div class="row">
+  <div class="column1" style="background-color:transparent;">
+    <h2>How to use the clocks</h2>
+    <p>The clock itself can be found <a href="ttps://lordgnomembe.github.io/today-clock/">here</a> (or <a href="https://lordgnomembe.github.io/today-clock/index-white-text.html">here</a> with white text) and can be added to any site using the <b>iframe</b> code here:</p>
+    <code>
+    &lt;iframe src="https://lordgnomembe.github.io/today-clock/" class="class-name"&gt;</br>
+&lt;/iframe&gt;
+    </code>
+    <p>or this code for white text:</p>
+        <code>
+    &lt;iframe src="https://lordgnomembe.github.io/today-clock/index-white-text.html" class="class-name"&gt;</br>
+&lt;/iframe&gt;
+    </code>
+
+    <p>It can then be styled using the following code:</p>
+        <code>
+.class-name { </br>
+  width: 200px;</br>
+  height: 120px;</br>
+  border: 3px solid black;</br>
+  border-radius: 20px;</br>
+}
+    </code>
+<p>Styling the background of the iframe changes the background of the clock, like this:</p>
+
+        <code>
+.class-name { </br>
+  width: 200px;</br>
+  height: 120px;</br>
+  border: 3px solid black;</br>
+  border-radius: 20px;</br>
+  background: red;</br>
+}
+    </code>
+<p>As such it can be given an image as background and any of the associated stylings:</p>
+
+        <code>
+.class-name {</br>
+  width: 200px;</br>
+  height: 120px;</br>
+  border: 3px solid black;</br>
+  border-radius: 20px;</br>
+  background-image: url("https://wosu.org/wp-content/uploads/2015/10/Ball-of-Sun.jpg");</br>
+  background-size: cover;</br>
+}
+    </code>
+<p>Likewise it can be given a gif background:</p>
+
+        <code>
+.class-name {</br>
+  width: 200px;</br>
+  height: 120px;</br>
+  border: 3px solid black;</br>
+  border-radius: 20px;</br>
+  background-image: url("https://media0.giphy.com/media/fqfPOiwKagbluB8Ors/giphy.gif");</br>
+  background-size: cover;</br>
+}
+    </code>
+
+  </div>
+  <div class="column2" style="background-color:transparent;">
+    <h2>Demos</h2>
+<iframe src="https://lordgnomembe.github.io/today-clock/" class="clock-frame-default">
+</iframe>
+<p style="text-align: center;">Default</p>
+<iframe src="https://lordgnomembe.github.io/today-clock/" class="clock-frame">
+</iframe>
+<p style="text-align: center;">With border and curves</p>
+
+<iframe src="https://lordgnomembe.github.io/today-clock/" class="clock-frame-background">
+</iframe>
+<p style="text-align: center;">With red background</p>
+
+<iframe src="https://lordgnomembe.github.io/today-clock/" class="clock-frame-background-image">
+</iframe>
+<p style="text-align: center;">With image background (<a href="https://wosu.org/wp-content/uploads/2015/10/Ball-of-Sun.jpg">Image Credit</a>)</p>
+
+<iframe src="https://lordgnomembe.github.io/today-clock/index-white-text.html" class="clock-frame-background-image-white">
+</iframe>
+<p style="text-align: center;">With image background and white text (<a href="https://upload.wikimedia.org/wikipedia/commons/d/d7/House_of_Commons_Chamber_1.png">Image Credit</a>)</p>
+
+<iframe src="https://lordgnomembe.github.io/today-clock" class="clock-frame-background-image-gif">
+</iframe>
+<p style="text-align: center;">With image background and white text (<a href="https://media0.giphy.com/media/fqfPOiwKagbluB8Ors/giphy.gif">Image Credit</a>)</p>
+
+</div>
+</div>
+
+</body>
+</html>
