@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<style>
+sup {
+  font-size: x-small
+}
+.datebox {
+ font-family: arial;
+ text-align: center;
+ border: 0px solid black;
+ max-width: 160px;
+ padding: 15px;
+ border-radius: 15px;
+}
+.time {
+font-size: 40px;
+}
+</style>
+<body>
+
+<div class="datebox">
+<div id="time" class="time"></div>
+<span id="date"></span>
+
+</div>
+</body>
+
+<script>
+const nth = function(d) {
+  if (d > 3 && d < 21) return 'th';
+  switch (d % 10) {
+    case 1:  return "st";
+    case 2:  return "nd";
+    case 3:  return "rd";
+    default: return "th";
+  }
+}
+const fortnightAway = new Date(+new Date);
+const date = fortnightAway.getDate();
+const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"][fortnightAway.getMonth()];
+
+document.getElementById("date").innerHTML = `${date}<sup>${nth(date)}</sup> ${month} ${fortnightAway.getFullYear()}`;
+</script>
+<script>
+function checkTime(i) {
+    if (i < 10) {
+        i = "0" + i;
+    }
+    return i;
+}
+
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    // add a zero in front of numbers<10
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
+    t = setTimeout(function () {
+        startTime()
+    }, 500);
+}
+startTime();
+</script>
+</html>
